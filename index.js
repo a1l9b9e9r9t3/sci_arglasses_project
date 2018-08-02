@@ -23,23 +23,26 @@ console.log('Answer: ' + obj['석곽묘']['정의']); //// debugging
 app.post('/', function (request, response) {
     console.log('request: \n' + JSON.stringify(request.body));
 
+    var object = request.body.queryResult.parameters['object'];
     var what = request.body.queryResult.parameters['what'];
     var who = request.body.queryResult.parameters['who'];
     var when = request.body.queryResult.parameters['when'];
     var where = request.body.queryResult.parameters['where'];
     var how = request.body.queryResult.parameters['how'];
     var why = request.body.queryResult.parameters['why'];
+    var SE = request.body.queryResult.parameters['SE'];
+    var PE = request.body.queryResult.parameters['PE'];
 
     let action = (request.body.queryResult.action) ? request.body.queryResult.action: 'default';
 
 
     const actionHandlers = {
-        'what.how': () => {
-            let responseToUser = { fulfillmentText: obj[what][how]};
+        'object.how.SE.PE': () => {
+            let responseToUser = { fulfillmentText: obj[object][how][SE][PE]};
             sendResponse(responseToUser);
         },
 
-        'what.how.why': () => {
+        'object.how.SE': () => {
             let responseToUser = { fulfillmentText: obj[what][how][why]};
             sendResponse(responseToUser);
         },
