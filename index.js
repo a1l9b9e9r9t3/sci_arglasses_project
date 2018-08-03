@@ -43,39 +43,39 @@ app.post('/', function (request, response) {
         },
 
         'object.how.SE': () => {
-            let responseToUser = { fulfillmentText: obj[what][how][why]};
+            let responseToUser = { fulfillmentText: obj[object][how][SE]};
             sendResponse(responseToUser);
         },
 
-        'what.when.how': () => {
-            let responseToUser = { fulfillmentText: obj[what][when][how]};
+        'object.how.PE': () => {
+            let responseToUser = { fulfillmentText: obj[object][how][PE]};
             sendResponse(responseToUser);
         },
         
                 
-        'what.where.how': () => {
-            let responseToUser = { fulfillmentText: obj[what][where][how]};
+        'obejct.who.PE': () => {
+            let responseToUser = { fulfillmentText: obj[object][who][PE]};
             sendResponse(responseToUser);
         },
         
         
-        'what.who': () => {
-            let responseToUser = { fulfillmentText: obj[what][who]};
+        'object.who.SE': () => {
+            let responseToUser = { fulfillmentText: obj[object][who][SE]};
             sendResponse(responseToUser);
         },
        
-        'what.who.how': () => {
-            let responseToUser = { fulfillmentText: obj[what][who][how]};
+        'object.when.PE': () => {
+            let responseToUser = { fulfillmentText: obj[object][when][PE]};
             sendResponse(responseToUser);
         },
         
-        'what.why': () => {
-            let responseToUser = { fulfillmentText: obj[what][why]};
+        'object.what.PE': () => {
+            let responseToUser = { fulfillmentText: obj[object][what][PE]};
             sendResponse(responseToUser);
         },
         
-        'what.when.who': () => {
-            let responseToUser = { fulfillmentText: obj[what][when][who]};
+        'object.what': () => {
+            let responseToUser = { fulfillmentText: obj[object][what]};
             sendResponse(responseToUser);
         },
         
