@@ -79,6 +79,47 @@ app.post('/', function (request, response) {
             sendResponse(responseToUser);
         },
         
+        'object.SE': () => {
+            let responseToUser = { fulfillmentText: obj[object][SE]};
+            sendResponse(responseToUser);
+        },
+        
+        'object.what.SE': () => {
+            let responseToUser = { fulfillmentText: obj[object][what][SE]};
+            sendResponse(responseToUser);
+        },
+        
+        'object.what.SE.PE': () => {
+            let responseToUser = { fulfillmentText: obj[object][what][SE][PE]};
+            sendResponse(responseToUser);
+        },
+        
+        'object.where.SE': () => {
+            let responseToUser = { fulfillmentText: obj[object][where][SE]};
+            sendResponse(responseToUser);
+        },
+        
+        'object.where.SE.PE': () => {
+            let responseToUser = { fulfillmentText: obj[object][where][SE][PE]};
+            sendResponse(responseToUser);
+        },
+        'object.why': () => {
+            let responseToUser = { fulfillmentText: obj[object][why]};
+            sendResponse(responseToUser);
+        },
+        'object.why.PE': () => {
+            let responseToUser = { fulfillmentText: obj[object][why][PE]};
+            sendResponse(responseToUser);
+        },
+        'object.why.SE': () => {
+            let responseToUser = { fulfillmentText: obj[object][why][SE]};
+            sendResponse(responseToUser);
+        },
+        'object.why.SE.PE': () => {
+            let responseToUser = { fulfillmentText: obj[object][why][SE][PE]};
+            sendResponse(responseToUser);
+        },
+        
         'default': () => {
             let responseToUser = { fulfillmentText: '죄송합니다. 정보가 없는 내용입니다. 다른 궁금한건 없으신가요?' };
             sendResponse(responseToUser);
