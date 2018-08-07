@@ -53,7 +53,7 @@ app.post('/', function (request, response) {
         },
         
                 
-        'obejct.who.PE': () => {
+        'object.who.PE': () => {
             let responseToUser = { fulfillmentText: obj[object][who][PE]};
             sendResponse(responseToUser);
         },
