@@ -99,6 +99,12 @@ app.post('/', function (request, response) {
             sendResponse(responseToUser);
         },
         
+         'object.where.PE': () => {
+            let responseToUser = { fulfillmentText: obj[object][where][PE]};
+            sendResponse(responseToUser);
+        },
+        
+        
         'object.where.SE.PE': () => {
             let responseToUser = { fulfillmentText: obj[object][where][SE][PE]};
             sendResponse(responseToUser);
