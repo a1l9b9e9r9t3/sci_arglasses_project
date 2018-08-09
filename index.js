@@ -137,6 +137,10 @@ app.post('/', function (request, response) {
             let responseToUser = { fulfillmentText: obj[object][who]};
             sendResponse(responseToUser);
         },
+        'object.who.SE.PE': () => {
+            let responseToUser = { fulfillmentText: obj[object][who][SE][PE]};
+            sendResponse(responseToUser);
+        },
         
         'default': () => {
             let responseToUser = { fulfillmentText: '죄송합니다. 정보가 없는 내용입니다. 다른 궁금한건 없으신가요?' };
